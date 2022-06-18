@@ -35,7 +35,7 @@
         try{
             let res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=63030f0a1bdaef33cc0d236f83981cbf&units=imperial`)
             let data = await res.json()
-            console.log(data)
+            // console.log(data)
             return data
         } catch(err) {
             console.error(err)
@@ -73,9 +73,9 @@
             min.className = 'card-text'
             min.innerHTML = `Today's Low: ${Math.round(cityObj.main['temp_min'])}°F`;
 
-            const test = document.createElement('p');
-            test.className = 'card-text'
-            test.innerHTML = cityObj.main['pressure'];
+            // const test = document.createElement('p');
+            // test.className = 'card-text'
+            // test.innerHTML = cityObj.main['pressure'];
     
             // Append title and population to card body
             cardBody.append(cityTitle);
@@ -83,7 +83,7 @@
             cardBody.append(temperature);
             cardBody.append(max);
             cardBody.append(min);
-            cardBody.append(test);
+            // cardBody.append(test);
     
             // Add card body to card div
             card.append(cardBody);
