@@ -59,22 +59,27 @@
     
             const temperature = document.createElement('p');
             temperature.className = 'card-text'
-            temperature.innerHTML = cityObj.main['temp'];
+            temperature.innerHTML = `Current Temperature: ${Math.round(cityObj.main['temp'])}°F`;
 
-            const max = document.createElement('max');
+            const words = document.createElement('p');
+            words.className = 'card-text'
+            words.innerHTML = `Feels Like: ${Math.round(cityObj.main['feels_like'])}°F`;
+
+            const max = document.createElement('p');
             max.className = 'card-text'
-            max.innerHTML = cityObj.main['temp_max'];
+            max.innerHTML = `Today's High: ${Math.round(cityObj.main['temp_max'])}°F`;
 
-            const min = document.createElement('min');
+            const min = document.createElement('p');
             min.className = 'card-text'
-            min.innerHTML = cityObj.main['temp_min'];
+            min.innerHTML = `Today's Low: ${Math.round(cityObj.main['temp_min'])}°F`;
 
-            const test = document.createElement('test');
+            const test = document.createElement('p');
             test.className = 'card-text'
             test.innerHTML = cityObj.main['pressure'];
     
             // Append title and population to card body
             cardBody.append(cityTitle);
+            cardBody.append(words)
             cardBody.append(temperature);
             cardBody.append(max);
             cardBody.append(min);
