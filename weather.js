@@ -47,10 +47,14 @@
             // Create the card div
             const card = document.createElement('div');
             card.className = 'card';
+
     
             // Create card body
             const cardBody = document.createElement('div');
             cardBody.className = 'card-body';
+
+            //Style card body
+            
     
             // HERE Create country name and population elements
             const cityTitle = document.createElement('h5');
@@ -90,7 +94,7 @@
     
             // Create our column for the row
             const col = document.createElement('div');
-            col.className = 'col-12'
+            col.className = 'col-12 col-md-6 col-lg-3'
     
             // Add the card to the column
             col.append(card)
@@ -100,6 +104,11 @@
     
             // Add the new column to our display
             cityDisplay.append(col);
+
+            //document.body.style.backgroundColor = "red";
+
+
+
         }
 }
 
